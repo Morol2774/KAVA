@@ -5,7 +5,9 @@ Open index.html in a browser. No build step, no server code.
 Tip: opened straight from disk, some browsers hide the window-light effect; on hosting or a local server (python3 -m http.server) it shows as designed.
 
 Contents
-- index.html  — the whole site (styles and scripts inside)
+- index.html      — page markup
+- css/styles.css  — all styles (palettes for morning / day / evening at the top)
+- js/main.js      — open-now sign, time-of-day palette, menu photo window, A day at Kava player
 - img/        — photos, videos (.mp4 + .webm) and poster frames
 - logo/       — Kava badge and "K" mark traced from the brand image (SVG + PNG)
 
@@ -19,4 +21,5 @@ Before launch
 - Ask the owners for the original logo file and swap logo/ + the inline SVG symbols in index.html.
 - Check hours, address and menu items with the owners; add prices only as final all-in prices.
 - No forms, cookies or trackers on the site. If analytics is added later, it must stay off until visitor consent.
+- index.html already carries a strict Content-Security-Policy (only this site + Google Fonts). If you add a new script, image host or embed, add it to that policy.
 - Add security headers on the host (HTTPS redirect, HSTS, Content-Security-Policy, X-Content-Type-Options, Referrer-Policy).
